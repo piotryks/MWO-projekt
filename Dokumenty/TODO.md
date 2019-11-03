@@ -33,9 +33,9 @@ Treniegi:
 ```JSON
 [
     {
-        name: NAZWA,
-        desc: OPIS,
-        tasks: [
+        "name": "NAZWA",
+        "desc": "OPIS",
+        "tasks": [
             ćwiczenie1,
             ćwiczenie2,
         ]
@@ -47,20 +47,20 @@ Gdzie ćwiczenie1 to obiekt ćwiczenia, przerwe tutaj traktujemy jako ćwiczenie
 Ćwiczenie:
 ```JSON
 {
-    name: NAZWA,
-    taskType: TYP,
-    opis: OPIS,
-    numOfSeries: LICZBA_SERII,
-    task: [
+    "name": "NAZWA",
+    "taskType": "TYP",
+    "opis": "OPIS",
+    "numOfSeries": "LICZBA_SERII",
+    "task": [
         {
-            type: ĆWICZENIE/PRZERWA
-            numOfRep: LICZBA_POWTÓRZEŃ,
-            value: OBCIĄŻENIE/CZAS/DYSTANS
+            "type": "ĆWICZENIE/PRZERWA",
+            "numOfRep": "LICZBA_POWTÓRZEŃ",
+            "value": "OBCIĄŻENIE/CZAS/DYSTANS"
         },
         {
-            type: ĆWICZENIE/PRZERWA
-            numOfRep: LICZBA_POWTÓRZEŃ,
-            value: OBCIĄŻENIE/CZAS/DYSTANS
+            "type": "ĆWICZENIE/PRZERWA",
+            "numOfRep": "LICZBA_POWTÓRZEŃ",
+            "value": "OBCIĄŻENIE/CZAS/DYSTANS"
         }
     ]
 }
