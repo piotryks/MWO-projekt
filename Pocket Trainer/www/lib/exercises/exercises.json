@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Podciąganie nachwytem",
+        "exe_type": "BACK",
+        "desc": "1.Ręce wyprostowane do końca. Głowa w jednej linii z osią ciała.\n2.Podciągnięcie wykonujemy jednym płynnym spokojnym ruchem.Podczas podciągania staramy się utrzymywać stałą pozycje, nie bujamy się i nie szarpiemy.\n3.Podciągnięcie na drążku to ruch z pełnego zwisu, aż do momentu, gdy broda znajdzie się na wysokości drążka.\n4.Następnie opuszczamy się do wyprostowanych rąk.",
+        "value_type": "BODY",
+        "default_rep": 10
+    },
+    {
+        "name": "Sprint w miejscu",
+        "exe_type": "CARDIO",
+        "desc": "Ruch oparty na małych krokach wykonywanych jak najszybciej w miejscu.",
+        "value_type": "TIME",
+        "default_rep": 70
+    }
+]

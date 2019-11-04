@@ -42,6 +42,9 @@ angular.module('app.routes', [])
         templateUrl: 'templates/nazwaCwiczenia.html',
         controller: 'nazwaCwiczeniaCtrl'
       }
+    },
+    params: {
+      param: null
     }
   })
 

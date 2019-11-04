@@ -1,13 +1,19 @@
-<ion-view title="Nazwa ćwiczenia" id="page4">
+<ion-view ng-model="infoExe" title="" id="page4">
   <ion-content padding="true" class="has-header">
-    <h1 id="nazwaCwiczenia-heading1" style="color:#000000;">Heading</h1>
+    <h1 id="nazwaCwiczenia-heading1" style="color:#000000;">{{ infoExe.name }}</h1>
     <div id="nazwaCwiczenia-markdown5" class="show-list-numbers-and-dots">
-      <p style="color:#000000;">Jakieś info. Że plecy bolą, i nie mogą podnieść. </p>
+      <p style="color:#000000;" ng-bind-html="infoExe.desc"></p>
     </div>
     <ion-list id="nazwaCwiczenia-list5">
-      <ion-item id="nazwaCwiczenia-list-item29">Item 1</ion-item>
-      <ion-item id="nazwaCwiczenia-list-item30">Item 2</ion-item>
-      <ion-item id="nazwaCwiczenia-list-item31">Item 3</ion-item>
+      <ion-item>Rodzaj ćwiczenia
+        <span style="float: right;">{{ infoExe.exe_type }}</span>
+      </ion-item>
+      <ion-item ng-show="infoExe.value_type != 'TIME'">Przykładowa ilość powt.
+        <span style="float: right;">{{ infoExe.default_rep }}</span>
+      </ion-item>
+      <ion-item ng-show="infoExe.value_type === 'TIME'">Przykładowy czas
+        <span style="float: right;">{{ convertTime(infoExe.default_rep) }}</span>
+      </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>
