@@ -4,11 +4,12 @@ angular.module('app.controllers')
 function ($scope, ExercisesServ, $state, Library) {
 
     $scope.listOfExercises = []
-    let listOfUserExe
+    let listOfUserExe = null
 
     $scope.$on('$ionicView.beforeEnter', () => {  
         // window.localStorage.clear()
-        listOfUserExe = window.localStorage.getItem('listOfUserExe')  
+        const storageJSON = JSON.parse(window.localStorage.getItem('userExe'))  
+        if(storageJSON != null) { listOfUserExe = storageJSON.value }
         console.log('listofUserExe', listOfUserExe)
         ExercisesServ.getListOfExercises().then(data => {
             let temp = []

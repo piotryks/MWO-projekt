@@ -15,8 +15,8 @@ function ($scope, $stateParams, Library) {
 
     $scope.addNewExe = (exe) => {
         let listOfUserExe = []
-        listOfUserExe = window.localStorage.getItem('listOfUserExe')
-        console.log(listOfUserExe)
+        const userExe = JSON.parse(window.localStorage.getItem('userExe'))
+        if(userExe != null) { listOfUserExe = userExe.value }
         let defaultVal = null
         if(exe.reps > 0) { defaultVal = exe.reps }
         else if(exe.distance > 0) { defaultVal = exe.distance }
@@ -26,14 +26,18 @@ function ($scope, $stateParams, Library) {
             "exe_type": exe.selectedType.id,
             "muscle_part": exe.selectedMusclePart.id,
             "desc": exe.desc,
-            "value_type": "",
+            "value_type": exe.selectedType.id,
             "default_rep": defaultVal
         }
-        if(listOfUserExe == null) { listOfUserExe = [] }
+
         listOfUserExe.push(jsonObject)
-        console.log("LISTA: ", listOfUserExe)
-        window.localStorage.removeItem('listOfUserExe')
-        window.localStorage.setItem('listOfUserExe', listOfUserExe)
+        let json = {
+            value: listOfUserExe
+        }
+
+        console.log("LISTA: ", json)
+        window.localStorage.removeItem('userExe')
+        window.localStorage.setItem('userExe', JSON.stringify(json))
     }
 
 }])
