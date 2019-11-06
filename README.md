@@ -5,4 +5,4 @@ Projekt realizowany na zajęcia z Metod Wytwarzania Oprogramowania
 
 [Zaimplementowane JSON-y](/Dokumenty/Implemented.md)
 
-[Biblioteka JSON-ów -> *library.js*](/Dokumenty/Librabry.md)
+[Biblioteka JSON-ów -> *library.js*](/Dokumenty/Library.md)
