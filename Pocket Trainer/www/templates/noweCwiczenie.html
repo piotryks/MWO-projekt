@@ -15,15 +15,17 @@
       </label>
       <label class="item item-input" id="noweCwiczenie-input4" ng-show="exe.selectedType.id === 'REPS'">
         <span class="input-label">Ilość powtórzeń</span>
-        <input ng-model="exe.reps" type="number" placeholder=""> 
+        <input ng-model="exe.reps" type="number" placeholder="ilość" min="1" step="1"> 
       </label>
       <label class="item item-input" id="noweCwiczenie-input4" ng-show="exe.selectedType.id === 'DISTANCE'">
         <span class="input-label">Dystans</span>
-        <input ng-model="exe.distance" type="number" placeholder=""> 
+        <input ng-model="exe.dist.kilometers" type="number" placeholder="kilometry" min="0" max="100" step="1">
+        <input ng-model="exe.dist.meters" type="number" placeholder="metry" min="0" max="999" step="100"> 
       </label>
       <label class="item item-input" id="noweCwiczenie-input4" ng-show="exe.selectedType.id === 'TIME'">
         <span class="input-label">Czas</span>
-        <input ng-model="exe.time" type="number" placeholder=""> 
+        <input ng-model="exe.time.minutes" type="number" placeholder="minuty" min="0" max="360" step="1">
+        <input ng-model="exe.time.seconds" type="number" placeholder="sekundy" min="0" max="59" step="10"> 
       </label>
       <label class="item item-input" id="noweCwiczenie-textarea1">
         <span class="input-label">Opis</span><textarea ng-model="exe.desc" placeholder="Opis ćwiczenia"></textarea></label>

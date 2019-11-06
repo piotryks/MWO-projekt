@@ -18,7 +18,7 @@
         <span style="float: right;">{{ convertTime(infoExe.default_rep) }}</span>
       </ion-item>
       <ion-item ng-show="infoExe.value_type === 'DISTANCE'">Przykładowa odległość
-          <span style="float: right;">{{ infoExe.default_rep }}</span>
+          <span style="float: right;">{{ convertDistance(infoExe.default_rep) }}</span>
         </ion-item>
     </ion-list>
   </ion-content>
