@@ -1,0 +1,43 @@
+<ion-view title="Ustawienia ćwiczenia" id="page11">
+    <ion-content padding="true" class="has-header">
+        <div class="excTitle">
+            {{exc.name}}
+        </div>
+        <div class="excDesc">
+            <div class="excSmallTitle">Partia mięśniowa</div>
+            <div class="excSmallContent">{{exc.muscle_part}}</div>
+            <div style="clear: both;"></div>
+        </div>
+        <div class="excDesc">
+            <div class="excSmallTitle">Rodzaj ćwiczenia</div>
+            <div class="excSmallContent">{{exc.exe_type}}</div>
+            <div style="clear: both;"></div>
+            <div class="excDesc">
+                <p style="color:#000000;" ng-bind-html="exc.desc"></p>
+            </div>
+        </div>
+        <div>Serie ćwiczenia: </div>
+        <ion-list>
+            <ion-item>
+                <div ng-repeat="series in excSeries" style="padding-bottom: 5px;">
+                    <ion-item ng-show="showReps">
+                        <div class="repsTtile">Ilość powtórzeń: </div>
+                        <input type="number" placeholder="ilość" min="1" step="1" class="repsInput" ng-model="series.rep">
+                        <div style="clear: both;"></div>
+                    </ion-item>
+                    <ion-item>
+                        <div class="repsTtile">Wartość ćwiczona: </div>
+                        <div class="valueType">{{exc.value_type}}</div>
+                        <input type="number" placeholder="wartość" min="1" step="1" class="valueInput" ng-model="series.value">
+                        <div style="clear: both;"></div>
+                    </ion-item>
+                </div>
+                <div id="trening-button-bar5" class="button-bar">
+                    <div class="button button-assertive button-block" style="margin-bottom: 0;">Dodaj przerwę</div>
+                    <div class="button button-dark button-block" style="margin-bottom: 0;" ng-click="addSeries()">Dodaj serię</div>
+                </div>
+            </ion-item>
+            <button class="button button-balanced button-block" ng-click="acceptExc()">Akceptuj ćwiczenie</button>
+        </ion-list>
+    </ion-content>
+</ion-view>

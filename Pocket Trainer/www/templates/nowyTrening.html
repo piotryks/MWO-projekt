@@ -3,16 +3,23 @@
     <form id="nowyTrening-form4" class="list">
       <label class="item item-input" id="nowyTrening-input8">
         <span class="input-label">Nazwa</span>
-        <input type="text" placeholder="">
+        <input type="text" placeholder="" ng-model="training.name">
       </label>
     </form>
     <form id="nowyTrening-form5" class="list">
       <label class="item item-input" id="nowyTrening-textarea2">
-        <span class="input-label">Opis</span><textarea placeholder=""></textarea></label>
+        <span class="input-label">Opis</span>
+        <textarea placeholder="" ng-model="training.desc"></textarea>
+      </label>
     </form>
+    Ćwiczenia:
+    <ion-item ng-repeat="exc in training.exc">
+      {{exc.name}}
+    </ion-item>
     <div id="nowyTrening-button-bar6" class="button-bar">
       <button id="nowyTrening-button34" class="button button-dark button-block">Dodaj przerwę</button>
-      <button id="nowyTrening-button36" class="button button-balanced button-block">Dodaj ćwiczenie</button>
+      <button id="nowyTrening-button36" class="button button-balanced button-block" ng-click="goToExcList()">Dodaj ćwiczenie</button>
     </div>
+    <button id="nowyTrening-button36" class="button button-balanced button-block" ng-click="saveTraining()">Zapisz trening</button>
   </ion-content>
 </ion-view>

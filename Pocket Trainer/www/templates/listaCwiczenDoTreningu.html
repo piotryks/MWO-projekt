@@ -1,0 +1,10 @@
+<ion-view title="Lista ćwiczeń" id="page10">
+    <ion-content padding="true" class="has-header">
+        <ion-list ng-repeat="musclePart in exeMusclePart">
+            <ion-item class="item-divider">{{ musclePart.name }}</ion-item>
+            <ion-item ng-repeat="exe in listOfExercises | filter: { muscle_part: musclePart.id }" ng-click="selectExc(exe)">
+                <div class="excSelectListItem">{{ exe.name }}</div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

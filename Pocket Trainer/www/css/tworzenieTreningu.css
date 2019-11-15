@@ -1,0 +1,53 @@
+.excSelectListItem{
+    float: left;
+}
+
+.excSelectButton{
+    float: right;
+}
+
+.excTitle{
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.excSmallTitle{
+    float: left;
+}
+
+.excSmallContent{
+    float: right;
+    font-weight: bold;
+}
+
+.excDesc{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.excDesc::after{
+    clear: both;
+}
+
+.repsTtile{
+    float: left;
+    padding-top: 6px;
+}
+
+.repsInput{
+    float: right;
+    width: 15%;
+}
+
+.valueType {
+    float: right;
+    width: 20%;
+    padding-top: 6px;
+}
+
+.valueInput{
+    width: 20%;
+    float: right;
+}
