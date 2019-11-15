@@ -1,14 +1,15 @@
 <ion-view title="Szczegoly treningu" id="page6">
   <ion-content padding="true" class="has-header">
-    <h1 id="szczegolyTreningu-heading2" style="color:#000000;">Heading</h1>
+    <h1 id="szczegolyTreningu-heading2" style="color:#000000;">{{training.name}}</h1>
     <div id="szczegolyTreningu-markdown6" class="show-list-numbers-and-dots">
-      <p style="color:#000000;">Opis tego treningu.</p>
+      <p style="color:#000000;">{{training.desc}}</p>
     </div>
-    <ion-list id="szczegolyTreningu-list7">
-      <ion-item id="szczegolyTreningu-list-item38">Ćwiczenie - ilość - ciężar/czas</ion-item>
-      <ion-item class="item-divider" id="szczegolyTreningu-list-item-divider5"> Przerwa - czas</ion-item>
-      <ion-item id="szczegolyTreningu-list-item40">Ćwiczenie - ilość - ciężar/czas</ion-item>
-      <ion-item class="item-divider" id="szczegolyTreningu-list-item-divider6"> Przerwa - czas</ion-item>
+    <ion-list>
+      <ion-item ng-repeat="e in training.exc">{{e.name}}
+          <ion-list>
+              <ion-item ng-repeat="s in e.series">{{s.rep}} x {{s.value}}</ion-item>
+          </ion-list>
+      </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>
