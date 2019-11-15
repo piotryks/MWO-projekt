@@ -15,6 +15,10 @@ angular.module('app.controllers')
                 $state.go('menu.nowyTrening')
             }
 
+            $scope.showTrainingDetail = (obj) => {
+                $state.go('menu.szczegolyTreningu', {training: obj})
+            }
+
             $scope.testApi = () => {
                 ApiRequest.testoweZapytanie().then( res => {
                     $scope.reqRes = true
