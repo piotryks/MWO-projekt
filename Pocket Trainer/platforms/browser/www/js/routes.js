@@ -60,6 +60,9 @@ angular.module('app.routes', [])
             templateUrl: 'templates/szczegolyTreningu.html',
             controller: 'szczegolyTreninguCtrl'
           }
+        },
+        params: {
+          training: null
         }
       })
 
