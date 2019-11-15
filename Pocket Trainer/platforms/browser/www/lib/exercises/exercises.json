@@ -3,7 +3,7 @@
         "name": "Podciąganie nachwytem",
         "exe_type": "CALISTHENIC",
         "muscle_part": "BACK",
-        "desc": "1.Ręce wyprostowane do końca. Głowa w jednej linii z osią ciała.\n2.Podciągnięcie wykonujemy jednym płynnym spokojnym ruchem.Podczas podciągania staramy się utrzymywać stałą pozycje, nie bujamy się i nie szarpiemy.\n3.Podciągnięcie na drążku to ruch z pełnego zwisu, aż do momentu, gdy broda znajdzie się na wysokości drążka.\n4.Następnie opuszczamy się do wyprostowanych rąk.",
+        "desc": "1.Ręce wyprostowane do końca. Głowa w jednej linii z osią ciała. <br/>2.Podciągnięcie wykonujemy jednym płynnym spokojnym ruchem.Podczas podciągania staramy się utrzymywać stałą pozycje, nie bujamy się i nie szarpiemy. <br/>3.Podciągnięcie na drążku to ruch z pełnego zwisu, aż do momentu, gdy broda znajdzie się na wysokości drążka.<br/> 4.Następnie opuszczamy się do wyprostowanych rąk.",
         "value_type": "REPS",
         "default_rep": 10
     },
