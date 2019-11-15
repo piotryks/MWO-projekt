@@ -11,5 +11,9 @@
       </div>
     </div>
     <a ng-click="newTraining()" id="treningi-button9" class="button button-positive button-block">Nowy trening</a>
+    <a ng-click="testApi()" class="button button-positive button-calm" style="float: left;">Testowe odpytanie api</a>
+    <div ng-show="reqRes == true" style="float: right;">UANE</div>
+    <div ng-show="reqRes == false" style="float: right;">NIEUDANE</div>
+    <div style="clear: both;"></div>
   </ion-content>
 </ion-view>
