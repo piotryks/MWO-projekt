@@ -8,6 +8,7 @@
 - **[ ML ]** Opracować strukturę JSON dla pojedyczego zapisanego w local storage (ćwiczenie dodane przez użytkownika)
 - **[ ML ]** Zapisywanie do local storage
 - **[ ML ]** Rozbudowanie struktury plików w projekcie (stworzenie katalogów dla serwisów i kontrolerów)
+- **[ JD ]** Stworzenie bazy danych - stworzenie bazy danych do przetrzymywania globalnych danych
 - **[ ]** Obsługa pamięci po uruchomieniu aplikacji - sprawdzanie zawartości local storage
 - **[ JD ]** Obsługa danymi aplikacji - stworzenie prostej strony do przeglądania i zarządzania danymi z bazy danych.
 - **[ ML ]** Stworzyć plik JSON zwierający listę kilku przykładowych ćwiczeń (będą to ćwiczenia wpisane w aplikacji), dobrze by było gdyby struktua JSONów była taka sama jak tych zapisywanych do local storage
