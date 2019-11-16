@@ -23,6 +23,7 @@
 - **[ ]** Stworzyć okno wyświetlające listę ćwiczeń (na razie tylko nazwy, bez możliwości podglądu)
 - **[ ]** Stworzyć okno wyświetlające listę trenigów (na razie bez możliwości interakcji)
 - **[ ]** Stowrzyć dokumentacje opracownych JSONów
+ **[ JD ]** Rest api - Stworzenie api. 
 
 ---  
 
