@@ -24,6 +24,7 @@
 - **[ ]** Stworzyć okno wyświetlające listę trenigów (na razie bez możliwości interakcji)
 - **[ ]** Stowrzyć dokumentacje opracownych JSONów
  **[ JD ]** Rest api - Stworzenie api. 
+ **[ JD ]** Rest api Test - Stworzenie testowej funkcji odpowiadającej zapytaniom metody POST. 
 
 ---  
 
