@@ -9,6 +9,7 @@
 - **[ ML ]** Zapisywanie do local storage
 - **[ ML ]** Rozbudowanie struktury plików w projekcie (stworzenie katalogów dla serwisów i kontrolerów)
 - **[ ]** Obsługa pamięci po uruchomieniu aplikacji - sprawdzanie zawartości local storage
+- **[ JD ]** Obsługa danymi aplikacji - stworzenie prostej strony do przeglądania i zarządzania danymi z bazy danych.
 - **[ ML ]** Stworzyć plik JSON zwierający listę kilku przykładowych ćwiczeń (będą to ćwiczenia wpisane w aplikacji), dobrze by było gdyby struktua JSONów była taka sama jak tych zapisywanych do local storage
 - **[ ]** Obsłużyć okno tworzenia treningu, na razie bez dodawania własnego ćwiczenia, dodać tylko przycisk przenoszący na okno dodawania ćwiczenia
 - **[ ]** Opracować metodę przechowywania źródła z którego przenieśliśmy się na okno dodawania ćwiczenia, np gdy dodajemy ćwiczenie w trakcie dodawania treningu to po dodaniu ćwiczenia poza dodaniem go do local storage dodajemy go na tworzoną aktualnie listę trningową
