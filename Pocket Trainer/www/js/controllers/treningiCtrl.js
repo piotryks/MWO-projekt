@@ -10,6 +10,12 @@ angular.module('app.controllers')
                 console.log('Treningi urzytkownika: ',$scope.userTrainings)
             });
 
+            $scope.editTraining = (training) => {
+                CreateTraining.newTraining = training
+                CreateTraining.editID = $scope.userTrainings.indexOf(training)
+                $state.go('menu.edycjaTreningu')
+            }
+
             $scope.newTraining = () => {
                 CreateTraining.resetData()
                 $state.go('menu.nowyTrening')
