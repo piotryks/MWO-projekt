@@ -12,7 +12,7 @@ angular.module('app.controllers')
             }
 
             $scope.$on('$ionicView.beforeEnter', () => {
-                $scope.exc = $stateParams.exercise
+                angular.copy($stateParams.exercise, $scope.exc)
                 if ($scope.exc.value_type == 'REPS') {
                     $scope.showReps = true
                 }
@@ -32,6 +32,7 @@ angular.module('app.controllers')
                 $scope.exc.series = $scope.excSeries
                 CreateTraining.addExc($scope.exc)
                 $ionicHistory.removeBackView()
+                console.log(CreateTraining.newTraining)
                 if (CreateTraining.edit) {
                     $state.go('menu.edycjaTreningu')
                 } else {
