@@ -4,10 +4,11 @@
       <ion-item class="item-avatar" id="treningi-list-item6">
         <h2>{{tra.name}}</h2>
       </ion-item>
-      <a ui-sref="trening()" id="treningi-button1" class="button button-balanced button-block">Rozpocznij</a>
-      <div id="treningi-button-bar1" class="button-bar">
-        <a ng-click="editTraining(tra)" id="treningi-button6" class="button button-assertive button-block">Edytuj</a>
-        <a ng-click="showTrainingDetail(tra)" id="treningi-button8" class="button button-calm button-block">Szczegóły</a>
+      <a ui-sref="trening()" class="button button-balanced button-block">Rozpocznij</a>
+      <div class="button-bar">
+        <a ng-click="deleteTraining(tra)" class="button button-assertive button-block">Usuń</a>
+        <a ng-click="editTraining(tra)" class="button button-positive button-block">Edytuj</a>
+        <a ng-click="showTrainingDetail(tra)" class="button button-calm button-block">Szczegóły</a>
       </div>
     </div>
     <a ng-click="newTraining()" id="treningi-button9" class="button button-positive button-block">Nowy trening</a>
@@ -15,5 +16,16 @@
     <div ng-show="reqRes == true" style="float: right;">UANE</div>
     <div ng-show="reqRes == false" style="float: right;">NIEUDANE</div>
     <div style="clear: both;"></div>
+    <div ng-show="removePopup" class="deletePopup">
+      <div class="deletePopupInfo">
+        <div>
+          Czy chcesz usunąć trening {{trainToRemove.name}}?
+        </div>
+        <div class="button-bar">
+          <a ng-click="deleteConfirm()" class="button button-assertive button-block">Tak</a>
+          <a ng-click="deleteDismiss()" class="button button-calm button-block">Nie</a>
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>
