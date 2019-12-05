@@ -29,5 +29,11 @@ angular.module('app.services')
                     exc: ""
                 }    
             }
+            
+            this.removeAt = (index) => {
+                if(this.newTraining.exc) {
+                    this.newTraining.exc.splice(index, 1)
+                }
+            }
 
         }])

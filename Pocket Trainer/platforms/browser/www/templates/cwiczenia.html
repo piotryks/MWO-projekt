@@ -4,7 +4,10 @@
     
     <ion-list ng-repeat="musclePart in exeMusclePart">
       <ion-item class="item-divider">{{ musclePart.name }}</ion-item>
-      <ion-item ng-click="goToExe(exe)" ng-repeat="exe in listOfExercises | filter: { muscle_part: musclePart.id }">{{ exe.name }}</ion-item>
+      <ion-item ng-click="goToExe(exe)" ng-repeat="exe in listOfExercises | filter: { muscle_part: musclePart.id }">
+        {{ exe.name }}
+        <i class="fas fa-user-circle" style="float: right;" ng-hide="exe.default_training"></i>
+      </ion-item>
     </ion-list>
     
     <!-- <ion-list id="cwiczenia-list4">

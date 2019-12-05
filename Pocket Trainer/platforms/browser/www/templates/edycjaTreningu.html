@@ -1,18 +1,38 @@
 <ion-view title="Edycja treningu" id="page8">
   <ion-content padding="true" class="has-header">
-    <h1 id="edycjaTreningu-heading4" style="color:#000000;">Nazwa treningu</h1>
-    <div id="edycjaTreningu-markdown10" class="show-list-numbers-and-dots">
-      <p style="color:#000000;">Some friendly
-        <strong>markdown</strong>
-      </p>
+    <form id="nowyTrening-form4" class="list">
+      <label class="item item-input" id="nowyTrening-input8">
+        <span class="input-label">Nazwa</span>
+        <input type="text" placeholder="" ng-model="editTraining.name">
+      </label>
+    </form>
+    <form id="nowyTrening-form5" class="list">
+      <label class="item item-input" id="nowyTrening-textarea2">
+        <span class="input-label">Opis</span>
+        <textarea placeholder="" ng-model="editTraining.desc"></textarea>
+      </label>
+    </form>
+    Ćwiczenia:
+    <ion-item ng-repeat="exc in editTraining.exc track by $index">
+      {{exc.name}}
+      <span ng-show="exc.exe_type == null && exc.name == 'Przerwa'">({{ exc.default_rep }} s)</span>
+      <button style="float: right;" class="button button-small button-assertive" ng-click="showPopupRemoveExercise($index)"><i class="fas fa-trash"></i></button>
+    </ion-item>
+    <div id="nowyTrening-button-bar6" class="button-bar">
+      <button id="nowyTrening-button34" class="button button-dark button-block" ng-click="addBreak()">Dodaj przerwę</button>
+      <button id="nowyTrening-button36" class="button button-balanced button-block" ng-click="goToExcList()">Dodaj ćwiczenie</button>
     </div>
-    <ion-list id="edycjaTreningu-list10">
-      <ion-item id="edycjaTreningu-list-item43">Przysiady - 10 powt.</ion-item>
-      <ion-item class="item-divider" id="edycjaTreningu-list-item-divider10"> Czasoumilacz - 60 sek.</ion-item>
-    </ion-list>
-    <div id="edycjaTreningu-button-bar7" class="button-bar">
-      <button id="edycjaTreningu-button37" class="button button-dark button-block">Dodaj przerwę</button>
-      <button id="edycjaTreningu-button38" class="button button-balanced button-block">Dodaj ćwiczenie</button>
-    </div>
+    <button id="nowyTrening-button36" class="button button-balanced button-block" ng-click="saveTraining()">Zapisz trening</button>
   </ion-content>
+  <div ng-show="removePopup" class="deletePopup">
+    <div class="deletePopupInfo">
+      <div>
+        Usunąć pozycję z treningu?
+      </div>
+      <div class="button-bar">
+        <a ng-click="deleteExc()" class="button button-assertive button-block">Tak</a>
+        <a ng-click="cancelDelete()" class="button button-calm button-block">Nie</a>
+      </div>
+    </div>
+  </div>
 </ion-view>

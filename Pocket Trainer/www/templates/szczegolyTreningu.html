@@ -7,7 +7,7 @@
     <ion-list>
       <ion-item ng-repeat="e in training.exc">{{e.name}}
           <ion-list>
-              <ion-item ng-repeat="s in e.series">{{s.rep}} x {{s.value}}</ion-item>
+              <ion-item ng-repeat="s in e.series">{{ convert(e.value_type, s) }}</ion-item>
           </ion-list>
       </ion-item>
     </ion-list>

@@ -21,5 +21,17 @@
           <span style="float: right;">{{ convertDistance(infoExe.default_rep) }}</span>
         </ion-item>
     </ion-list>
+    <div ng-show="removePopup" class="deletePopup">
+      <div class="deletePopupInfo">
+        <div>
+          Usunąć ćwiczenie?
+        </div>
+        <div class="button-bar">
+          <a ng-click="deleteExercise()" class="button button-assertive button-block">Tak</a>
+          <a ng-click="cancelDelete()" class="button button-calm button-block">Nie</a>
+        </div>
+      </div>
+    </div>
+    <button ng-hide="infoExe.default_training" class="button button-block button-assertive" ng-click="showPopupRemoveExercise()">Usuń ćwiczenie</button>
   </ion-content>
 </ion-view>

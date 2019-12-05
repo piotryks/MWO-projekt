@@ -15,7 +15,8 @@ function ($scope, $stateParams, Library) {
 
     $scope.addNewExe = (exe) => {
         let listOfUserExe = []
-        const userExe = JSON.parse(window.localStorage.getItem('userExe'))
+        const userExe = JSON.parse(window.localStorage.getItem('userExe'))        
+        console.log(userExe)
         if(userExe != null) { listOfUserExe = userExe.value }
         let defaultVal = null
         // TIME
@@ -56,7 +57,7 @@ function ($scope, $stateParams, Library) {
             "value_type": exe.selectedType.id,
             "default_rep": defaultVal
         }
-
+        console.log(listOfUserExe)
         listOfUserExe.push(jsonObject)
         let json = {
             value: listOfUserExe

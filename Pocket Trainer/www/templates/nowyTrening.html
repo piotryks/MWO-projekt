@@ -13,13 +13,26 @@
       </label>
     </form>
     Ćwiczenia:
-    <ion-item ng-repeat="exc in training.exc">
+    <ion-item ng-repeat="exc in training.exc track by $index">
       {{exc.name}}
+      <button style="float: right;" class="button button-small button-assertive" ng-click="showPopupRemoveExercise($index)"><i class="fas fa-trash"></i></button>
+      <span ng-show="exc.exe_type == null && exc.name == 'Przerwa'">({{ exc.default_rep }} s)</span>
     </ion-item>
     <div id="nowyTrening-button-bar6" class="button-bar">
-      <button id="nowyTrening-button34" class="button button-dark button-block">Dodaj przerwę</button>
+      <button id="nowyTrening-button34" class="button button-dark button-block" ng-click="addBreak()">Dodaj przerwę</button>
       <button id="nowyTrening-button36" class="button button-balanced button-block" ng-click="goToExcList()">Dodaj ćwiczenie</button>
     </div>
     <button id="nowyTrening-button36" class="button button-balanced button-block" ng-click="saveTraining()">Zapisz trening</button>
+    <div ng-show="removePopup" class="deletePopup">
+      <div class="deletePopupInfo">
+        <div>
+          Usunąć pozycję z treningu?
+        </div>
+        <div class="button-bar">
+          <a ng-click="deleteExc()" class="button button-assertive button-block">Tak</a>
+          <a ng-click="cancelDelete()" class="button button-calm button-block">Nie</a>
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

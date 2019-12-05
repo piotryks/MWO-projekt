@@ -1,11 +1,21 @@
 [
     {
+        "name": "Przerwa",
+        "exe_type": null,
+        "muscle_part": null,
+        "desc": "",
+        "value_type": "TIME",
+        "default_rep": 60,
+        "default_training": true
+    },
+    {
         "name": "Podciąganie nachwytem",
         "exe_type": "CALISTHENIC",
         "muscle_part": "BACK",
         "desc": "1.Ręce wyprostowane do końca. Głowa w jednej linii z osią ciała. <br/>2.Podciągnięcie wykonujemy jednym płynnym spokojnym ruchem.Podczas podciągania staramy się utrzymywać stałą pozycje, nie bujamy się i nie szarpiemy. <br/>3.Podciągnięcie na drążku to ruch z pełnego zwisu, aż do momentu, gdy broda znajdzie się na wysokości drążka.<br/> 4.Następnie opuszczamy się do wyprostowanych rąk.",
         "value_type": "REPS",
-        "default_rep": 10
+        "default_rep": 10,
+        "default_training": true
     },
     {
         "name": "Sprint w miejscu",
@@ -13,7 +23,8 @@
         "muscle_part": "CIRCULAR",
         "desc": "Ruch oparty na małych krokach wykonywanych jak najszybciej w miejscu.",
         "value_type": "TIME",
-        "default_rep": 70
+        "default_rep": 70,
+        "default_training": true
     },
     {
         "name": "Brzuszki",
@@ -21,6 +32,7 @@
         "muscle_part": "ABS",
         "desc": "Połóż się na plecach, kolana ugięte. Ręce oprzyj na głowie, za uszami. Oderwij od ziemi tylko górną część pleców i wykonaj wydech. Wytrzymaj w takiej pozycji ok. 5 sekund, by poczuć, jak napinasz brzuch. Wróć do pozycji wyjściowej.",
         "value_type": "REPS",
-        "default_rep": 15
+        "default_rep": 15,
+        "default_training": true
     }
 ]

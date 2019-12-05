@@ -1,12 +1,14 @@
 angular.module('app.controllers')
 
-.controller('nazwaCwiczeniaCtrl', ['$scope', '$stateParams', 'Library',
-function ($scope, $stateParams, Library) {
+.controller('nazwaCwiczeniaCtrl', ['$scope', '$stateParams', 'Library', 'ExercisesServ', '$state',
+function ($scope, $stateParams, Library, ExercisesServ, $state) {
 
     const muscleParts = Library.getMusclePart()
     $scope.distance = ""
+    $scope.removePopup = false
 
-    $scope.$on('$ionicView.beforeEnter', () => {       
+    $scope.$on('$ionicView.beforeEnter', () => {      
+        $scope.removePopup = false 
         $scope.infoExe = $stateParams.param
         console.log(`%cInfo Exercise:\n`, `background: black; color: white`, $scope.infoExe)
     });
@@ -49,5 +51,26 @@ function ($scope, $stateParams, Library) {
         }
     }
     
+    $scope.showPopupRemoveExercise = () => {
+        console.log("Usuwanie")
+        $scope.removePopup = true
+    }
+
+    $scope.cancelDelete = () => {
+        $scope.removePopup = false
+    }
+
+    $scope.deleteExercise = () => {
+        console.log($scope.infoExe)
+        ExercisesServ.removeUserExercise($scope.infoExe).then(response => {
+            if(response) {
+                $scope.removePopup = false
+                $state.go('menu.cwiczenia')
+            }
+        },
+        error => {
+            console.log(error)
+        })
+    }
 
 }])

@@ -1,7 +1,7 @@
 angular.module('app.controllers')
 
-    .controller('treningiCtrl', ['$scope', '$stateParams', 'CreateTraining', '$state', 'ApiRequest','$ionicPlatform',
-        function ($scope, $stateParams, CreateTraining, $state, ApiRequest,$ionicPlatform) {
+    .controller('treningiCtrl', ['$scope', '$stateParams', 'CreateTraining', '$state', 'ApiRequest','$ionicPlatform', 'ExercisesServ',
+        function ($scope, $stateParams, CreateTraining, $state, ApiRequest,$ionicPlatform, ExercisesServ) {
 
             $scope.reqRes = null
             $scope.trainToRemove = null
@@ -19,6 +19,7 @@ angular.module('app.controllers')
               }, 100);
 
             $scope.$on('$ionicView.beforeEnter', () => {   
+                ExercisesServ.getListOfExercises()
                 $scope.userTrainings = JSON.parse(window.localStorage.getItem('userTraining'))
                 console.log('Treningi urzytkownika: ',$scope.userTrainings)
             });
