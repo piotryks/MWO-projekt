@@ -3,6 +3,9 @@ angular.module('app.services')
     .service('CreateTraining', ['$http', '$q',
         function ($http, $q) {
 
+            this.edit = false
+            this.editID = {}
+
             this.newTraining = {
                 name: "",
                 desc: "",
@@ -18,8 +21,8 @@ angular.module('app.services')
             }
 
             this.resetData = () => {
-                this.isNewExc = false
                 this.newExc = {}
+                this.edit = false
                 this.newTraining = {
                     name: "",
                     desc: "",
