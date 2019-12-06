@@ -6,6 +6,7 @@ angular.module('app.controllers')
             $scope.reqRes = null
             $scope.trainToRemove = null
             $scope.removePopup = false
+            getTrainings = null
 
             // przechwytywanie back buttona
             $ionicPlatform.registerBackButtonAction(function (e) {
@@ -42,6 +43,8 @@ angular.module('app.controllers')
             $scope.testApi = () => {
                 ApiRequest.testoweZapytanie().then( res => {
                     $scope.reqRes = true
+                    getTrainings = res
+                    console.log(getTrainings)
                 }).catch( err => {
                     $scope.reqRes = false
                 })

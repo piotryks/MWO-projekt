@@ -8,7 +8,7 @@ angular.module('app.services')
 
                 $http.post('http://127.0.0.1:8000/api').then(result => {
                     console.log(result)
-                    q.resolve()
+                    q.resolve(result)
                 }, error => {
                     console.log(error)
                     q.reject()
