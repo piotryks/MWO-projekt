@@ -6,7 +6,7 @@ angular.module('app.services')
             this.testoweZapytanie = () => {
                 var q = $q.defer();
 
-                $http.post('http://127.0.0.1:8000/api').then(result => {
+                $http.get('http://127.0.0.1:8000/api').then(result => {
                     console.log(result)
                     q.resolve(result)
                 }, error => {

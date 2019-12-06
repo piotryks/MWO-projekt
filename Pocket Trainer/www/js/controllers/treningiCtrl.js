@@ -44,7 +44,9 @@ angular.module('app.controllers')
                 ApiRequest.testoweZapytanie().then( res => {
                     $scope.reqRes = true
                     getTrainings = res
+                    $scope.userTrainings = $scope.userTrainings.concat(getTrainings)
                     console.log(getTrainings)
+                    $scope.$apply()
                 }).catch( err => {
                     $scope.reqRes = false
                 })
