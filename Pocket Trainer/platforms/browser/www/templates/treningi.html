@@ -4,7 +4,7 @@
       <ion-item class="item-avatar" id="treningi-list-item6">
         <h2>{{tra.name}}</h2>
       </ion-item>
-      <a ui-sref="trening()" class="button button-balanced button-block">Rozpocznij</a>
+      <a ng-click="goToTraining(tra)" class="button button-balanced button-block">Rozpocznij</a>
       <div class="button-bar">
         <a ng-click="deleteTraining(tra)" class="button button-assertive button-block">Usuń</a>
         <a ng-click="editTraining(tra)" class="button button-positive button-block">Edytuj</a>

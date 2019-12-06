@@ -1,17 +1,53 @@
 <ion-view title="Trening" id="page7">
   <ion-content padding="true" class="has-header">
-    <h1 id="trening-heading3" style="color:#000000;">Heading</h1>
-    <div id="trening-container1" class="creator-container"></div>
-    <ion-list id="trening-list8">
-      <ion-item id="trening-list-item41">Przysiady - 10 powt.</ion-item>
-      <ion-item class="item-divider" id="trening-list-item-divider7"> Czasoumilacz - 60 sek.</ion-item>
-      <ion-item id="trening-list-item42">Wykroki - 10 powt.</ion-item>
-      <ion-item class="item-divider" id="trening-list-item-divider8"> Czasoumilacz - 60 sek.</ion-item>
-    </ion-list>
-    <div id="trening-button-bar3" class="button-bar"></div>
-    <div id="trening-button-bar5" class="button-bar">
-      <a ui-sref="menu.treningi()" id="trening-button27" class="button button-assertive button-block">Zakończ</a>
-      <button id="trening-button29" class="button button-dark button-block">Pauza</button>
+    <div class="exerciseBegin" ng-show="isExTime">
+      <h1 style="color:#000000;">{{actualExc.name}}</h1>
+      <div class="show-list-numbers-and-dots">
+        <p style="color:#000000;">{{actualExc.desc}}</p>
+      </div>
+      <div class="show-list-numbers-and-dots">
+        <p style="color:#000000;">Partia mięśniowa: {{actualExc.muscle_part}}</p>
+      </div>
+      <div class="show-list-numbers-and-dots">
+        <p style="color:#000000;">Pozostało serii: {{toDo}}</p>
+      </div>
+      <ion-item>
+        <ion-list>
+          <ion-item>{{ convert(actualExc.value_type, getActualSeries()) }}</ion-item>
+          <ion-item ng-show="getActualSeries().value != null">{{ getActualSeries().value }}</ion-item>
+        </ion-list>
+      </ion-item>
+      <!-- TIMER -->
+      <ion-item ng-show="isTime(actualExc.value_type)">
+        {{timerValue}}
+        <button ng-show="!isTimeCalc && timerValue>0" ng-click="startTimer()" class="button button-balanced button-block">Start</button>
+        <button ng-show="isTimeCalc" ng-click="stopTimer()" class="button button-balanced button-block">Stop</button>
+      </ion-item>
+      <button ng-show="toDo > 1 && !isTimeCalc" ng-click="endSeries()" class="button button-balanced button-block">Zakończ serie</button>
+      <button ng-show="toDo <= 1  && !isTimeCalc" ng-click="endExc()" class="button button-balanced button-block">Zakończ  ćwiczenie</button>
+      <button ng-show="!isTimeCalc" ng-click="changeExc()" class="button button-balanced button-block">Zmień ćwiczenie</button>
+    </div>
+    <div ng-show="isExTime == false">
+      <h1 style="color:#000000;">{{training.name}}</h1>
+      <div class="show-list-numbers-and-dots">
+        <p style="color:#000000;">{{training.desc}}</p>
+      </div>
+      <ion-list>
+        <ion-item ng-repeat="e in training.exc">{{e.name}}
+          <ion-list>
+            <ion-item ng-repeat="s in e.series">{{ convert(e.value_type, s) }}</ion-item>
+          </ion-list>
+          <div class="button-bar">
+            <button class="button button-calm button-block">Szczegóły</button>
+            <button ng-click="beginExc(e)" ng-show="e.done != true" class="button button-balanced button-block"
+              style="min-width: 60%;">Rozpocznij ćwiczenie</button>
+          </div>
+          <h3 ng-show="e.done">Wykonano :)</h3>
+        </ion-item>
+      </ion-list>
+      <div class="button-bar">
+        <a ui-sref="menu.treningi()" class="button button-assertive button-block">Zakończ</a>
+      </div>
     </div>
   </ion-content>
 </ion-view>

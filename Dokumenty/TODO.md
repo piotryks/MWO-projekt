@@ -26,6 +26,10 @@
 - **[ ]** Stowrzyć dokumentacje opracownych JSONów
 - **[ JD ]** Rest api - Stworzenie api. 
 - **[ JD ]** Rest api Test - Stworzenie testowej funkcji odpowiadającej zapytaniom metody POST. 
+- **[ PK ]** Dodanie okna na którym wybieramy aktualne ćwiczenie
+- **[ PK ]** Obsługa notyfikacji systemowych
+- **[ PK ]** Funkcjonalność okna treningowego
+- **[ PK ]** Obsługa timera
 
 ---  
 

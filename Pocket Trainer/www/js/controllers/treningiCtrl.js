@@ -1,7 +1,7 @@
 angular.module('app.controllers')
 
-    .controller('treningiCtrl', ['$scope', '$stateParams', 'CreateTraining', '$state', 'ApiRequest','$ionicPlatform', 'ExercisesServ',
-        function ($scope, $stateParams, CreateTraining, $state, ApiRequest,$ionicPlatform, ExercisesServ) {
+    .controller('treningiCtrl', ['$scope', '$stateParams', 'CreateTraining', '$state', 'ApiRequest','$ionicPlatform', 'ExercisesServ','ActualTraining',
+        function ($scope, $stateParams, CreateTraining, $state, ApiRequest,$ionicPlatform, ExercisesServ,ActualTraining) {
 
             $scope.reqRes = null
             $scope.trainToRemove = null
@@ -21,7 +21,7 @@ angular.module('app.controllers')
             $scope.$on('$ionicView.beforeEnter', () => {   
                 ExercisesServ.getListOfExercises()
                 $scope.userTrainings = JSON.parse(window.localStorage.getItem('userTraining'))
-                console.log('Treningi urzytkownika: ',$scope.userTrainings)
+                console.log('Treningi uzytkownika: ',$scope.userTrainings)
             });
 
             $scope.editTraining = (training) => {
@@ -65,6 +65,11 @@ angular.module('app.controllers')
                 $scope.removePopup = false
                 $scope.trainToRemove = null
                 $scope.$apply()
+            }
+
+            $scope.goToTraining = (training) => {
+                ActualTraining.training = training
+                $state.go('trening')
             }
 
         }])

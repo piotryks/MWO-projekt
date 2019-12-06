@@ -9,7 +9,17 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "pl.students.pockettrainer"
+    },
+    "cordova-plugin-local-notification": {
+      "PACKAGE_NAME": "pl.students.pockettrainer"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "pl.students.pockettrainer"
+    },
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "pl.students.pockettrainer"
+    }
+  }
 }
